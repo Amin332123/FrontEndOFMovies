@@ -16,6 +16,7 @@ const Navbar = () => {
       <Link to="/">Home</Link>
       <Link to="/login">Login</Link>
       <Link to="/register">Register</Link>
+      {localStorage.getItem('token') && <Link to="/movies">Movies</Link>}
       {localStorage.getItem('token') && <button onClick={handleLogout}>Logout</button>}
     </nav>
   );
